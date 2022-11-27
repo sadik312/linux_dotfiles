@@ -10,39 +10,50 @@
 separator=true
 separator_block_width=15
 
+[wifi]
+command=~/.config/i3blocks/i3blocks-contrib/wifi/wifi
+label= 
+interval=60
+
 [volume]
-command=~/.config/i3blocks/scripts/vol/volume
-#LABEL=♪ 
+command=~/.config/i3blocks/i3blocks-contrib/volume/volume
 LABEL= 
 interval=1
-signal=10
-#STEP=5%
+signal=1
 
-[memory]
-command=~/.config/i3blocks/scripts/mem/memory
-label= 
+[disk]
+command=~/.config/i3blocks/i3blocks-contrib/disk/storage
+label= 
 interval=30
-min_width=: 100.00%
 
-[memory]
-label=SWAP
-interval=30
 
 [cpu_usage]
-command= ~/.config/i3blocks/scripts/cpu/cpu_usage
+command=~/.config/i3blocks/i3blocks-contrib/cpu_usage/cpu
 interval=10
 LABEL= 
 
-[temperature]
-command= ~/.config/i3blocks/scripts/temp/temperature
-label= 
+[memory]
+command=~/.config/i3blocks/i3blocks-contrib/memory/mem
+label= 
 interval=30
 
 [battery]
-command= ~/.config/i3blocks/scripts/battery/battery2
-markup=pango
+command=~/.config/i3blocks/i3blocks-contrib/battery/bat_prog
 interval=30
+LABEL=⚡ 
 
-[time]
-command=date '+%Y-%m-%d %H:%M:%S '
+[xkb_layout]
+command=~/.config/i3blocks/i3blocks-contrib/xkb_layout/xkb_switch
+font=monospace
+font_weight=bold
+interval=persist
+markup=pango
+
+[calendar]
+command=~/.config/i3blocks/i3blocks-contrib/calendar/cal
 interval=1
+LABEL= 
+DATEFMT=+%Y-%m-%d %H:%M:%S
+HEIGHT=180
+WIDTH=220
+
