@@ -1,0 +1,11 @@
+# laptop only
+"xrandr --output eDP-1 --auto --output HDMI-2 --off"
+Shift+Mod4 + v
+
+# monitor only
+"xrandr --output eDP-1 --off --output HDMI-2 --auto"
+Shift+Mod4 + b
+
+# laptop & monitor
+"xrandr --output eDP-1 --auto --output HDMI-2 --auto --right-of eDP-1"
+Shift+Mod4 + n
