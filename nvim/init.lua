@@ -12,4 +12,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
-require("lazy").setup("plugins")
+
+-- Load all plugin specs from the plugins directory
+local plugin_files = vim.fn.globpath(vim.fn.stdpath("config") .. "/lua/plugins", "*.lua", false, true)
+local plugins = {}
+
+for _, file in ipairs(plugin_files) do
+  local plugin = dofile(file)
+  if plugin then
+    table.insert(plugins, plugin)
+  end
+end
+
+require("lazy").setup(plugins)
+

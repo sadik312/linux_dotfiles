@@ -1,11 +1,9 @@
--- return lua table
+-- ~/nvim/lua/slydragonn/plugins/lualine.lua
+
 return {
-	"nvim-lualine/lualine.nvim",
-	config = function() -- set config attribute
-		require('lualine').setup({
-			options = {
-				theme = 'powerline_dark'
-			}
-		})
-	end
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+        require("lualine").setup()
+    end,
 }
